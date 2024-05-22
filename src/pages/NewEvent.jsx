@@ -47,7 +47,7 @@ export default function Example() {
       websiteURL: adjustedData.websiteURL
     };
     
-    fetch('http://localhost:5174/api/event', {
+    fetch('https://mauistrong.vercel.app/api/event', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

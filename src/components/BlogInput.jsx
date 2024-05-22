@@ -29,7 +29,7 @@ const BlogInput = ({ onClose }) => {
     };
 
     // Post the blog to the database
-    fetch('http://localhost:5174/api/blog', {
+    fetch('https://mauistrong.vercel.app/api/blog', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'

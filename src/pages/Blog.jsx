@@ -12,7 +12,7 @@ export const useFetch = (url) => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5174/api/blog')
+    fetch('https://mauistrong.vercel.app/api/blog')
       .then(response => response.json())
       .then(data => setBlogs(data.reverse()))
       .catch((error) => console.error('Error: ', error))
@@ -22,7 +22,7 @@ export const useFetch = (url) => {
 }
 
 function Blog() {
-  const blogs = useFetch('http://localhost:5174/api/blog')
+  const blogs = useFetch('https://mauistrong.vercel.app/api/blog')
 
   return (
     <div>

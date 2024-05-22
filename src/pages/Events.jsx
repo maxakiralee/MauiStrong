@@ -60,7 +60,7 @@ function Events() {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5174/api/event')
+    fetch('https://mauistrong.vercel.app/api/event')
       .then(response => response.json())
       .then(data => setEvents(data))
       .catch((error) => console.error('Error: ', error));

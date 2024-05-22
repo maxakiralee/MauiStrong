@@ -13,7 +13,7 @@ const event = {
     websiteURL: 'https://myevent.com'
   };
   
-  fetch('http://localhost:5174/api/event', {
+  fetch('https://mauistrong.vercel.app/api/event', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -32,7 +32,7 @@ const blog = {
     post: "This is an example post"
 };
 
-fetch('http://localhost:5174/api/blog', {
+fetch('https://mauistrong.vercel.app/api/blog', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
@@ -54,7 +54,7 @@ If you want to fetch data from the database into a .jsx file:
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5174/api/event')
+    fetch('hhttps://mauistrong.vercel.app/api/event')
       .then(response => response.json())
       .then(data => setEvents(data))
       .catch((error) => console.error('Error: ', error));
@@ -65,7 +65,7 @@ If you want to fetch data from the database into a .jsx file:
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5174/api/blog')
+    fetch('https://mauistrong.vercel.app/api/blog')
       .then(response => response.json())
       .then(data => setBlogs(data))
       .catch((error) => console.error('Error: ', error))

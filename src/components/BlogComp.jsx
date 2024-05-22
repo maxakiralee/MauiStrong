@@ -21,7 +21,7 @@ export const useFetch = (url) => {
 }
 
 function PostComp() {
-  const blogs = useFetch('http://localhost:5174/api/blog')
+  const blogs = useFetch('https://mauistrong.vercel.app/api/blog')
 
   const [words, setWords] = useState([]);
   const disappearTime = 7000; // Time in milliseconds after which a word disappears
