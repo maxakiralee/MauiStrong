@@ -4,13 +4,21 @@ import cors from 'cors'
 import dotenv from "dotenv"
 import {Event, Blog} from "../database/schemas.js"
 
+
 // Set up configs
 dotenv.config();
 const app = express();
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
+const bcrypt = require('bcryptjs');
 app.use(express.json());
 
 // Enable CORS
 app.use(cors());
+
+//Enable PassportJs
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Connect to database
 mongoose.connect(process.env.VITE_CONNECTION_URL)
